@@ -169,4 +169,3 @@ console.log(numbers.includes(7)); // checks if the element is present in the arr
 
 */
 
-
