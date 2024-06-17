@@ -169,3 +169,114 @@ console.log(numbers.includes(7)); // checks if the element is present in the arr
 
 */
 
+/*************************** Class 42: Introduction to Objects
+
+const sajeev = {
+    firstName: 'Sajeev',
+    lastName: 'Debnath',
+    age: 19,
+    job: 'Student',
+    friends: ['ABC', 'DEF', 'GHI']
+};
+
+// Use objects to group together different variables that belong together.
+
+// Objects vs array: Array needs order, objects do not need order. Objects have key-value pairs.
+
+console.log(sajeev);
+*/
+
+/*************************** Class 43: Dot vs. Bracket Notation
+
+const sajeev = {
+    firstName: 'Sajeev',
+    lastName: 'Debnath',
+    age: 19,
+    job: 'Student',
+    friends: ['ABC', 'DEF', 'GHI']
+};
+
+console.log(sajeev.lastName); // accessing the object using dot notation
+
+console.log(sajeev['age']) // accessing the object using bracket notation
+
+console.log(sajeev['jo' + 'b']) // can also use expressions in bracket notation
+
+const string = prompt('What do you want to know about Sajeev?');
+
+console.log(sajeev[string]); // using bracket notation to access the object
+
+if(!sajeev[string]){
+    console.log('Wrong request!');
+} 
+
+console.log(sajeev[string] + " has " +  sajeev.friends.length + " friends" + " and his best friend is " + sajeev.friends[0]);
+*/
+
+/*************************** Class 44: Object Methods
+
+const sajeev = {
+    firstName: 'Sajeev',
+    lastName: 'Debnath',
+    age: 19,
+    job: 'Student',
+    friends: ['ABC', 'DEF', 'GHI'],
+    birthYear: 2004,
+    hasDriversLicense: true,
+
+    calcAge: function(){ // method inside an object
+        return 2024 - this.birthYear;
+    }, // this keyword is used to access the object properties
+
+    getSummary: function(){
+        if(this.hasDriversLicense){
+            return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has a driver's license.`;
+        } else {
+            return `${this.firstName} is a ${this.age}-year old ${this.job}, and he has no driver's license.`;
+        }
+    }
+};
+
+console.log(sajeev.getSummary());*/
+
+/*************************** Challenge 3*/
+
+/* Write your code below. Good luck! 🙂 */
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    bmi: 0,
+    
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    bmi: 0,
+    
+    calcBMI: function() {
+        this.bmi = this.mass / (this.height * this.height);
+        return this.bmi;
+    }
+};
+
+if(mark.calcBMI() > john.calcBMI()){
+    console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`)
+} else {
+    console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`)
+}
+
+
+
+
+
+
+
+
