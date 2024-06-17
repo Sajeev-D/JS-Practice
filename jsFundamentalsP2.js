@@ -239,9 +239,7 @@ const sajeev = {
 
 console.log(sajeev.getSummary());*/
 
-/*************************** Challenge 3*/
-
-/* Write your code below. Good luck! 🙂 */
+/*************************** Challenge 3
 
 const mark = {
     fullName: 'Mark Miller',
@@ -250,8 +248,8 @@ const mark = {
     bmi: 0,
     
     calcBMI: function() {
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
+        this.bmi = (this.mass / ((this.height)*(this.height)))
+        return this.bmi
     }
 };
 
@@ -262,16 +260,24 @@ const john = {
     bmi: 0,
     
     calcBMI: function() {
-        this.bmi = this.mass / (this.height * this.height);
-        return this.bmi;
+        this.bmi = (this.mass / ((this.height)*(this.height)))
+        return this.bmi
     }
 };
+
 
 if(mark.calcBMI() > john.calcBMI()){
     console.log(`${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s (${john.bmi})`)
 } else {
     console.log(`${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s (${mark.bmi})`)
-}
+}*/
+
+
+
+
+
+
+
 
 
 
